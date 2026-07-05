@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Brand blue scale */
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #dbe6ff;
+  --color-brand-200: #b8d0ff;
+  --color-brand-300: #85acff;
+  --color-brand-400: #4c7dff;
+  --color-brand-500: #2454ff;
+  --color-brand-600: #1240eb;
+  --color-brand-700: #0e30bd;
+  --color-brand-800: #102a8f;
+  --color-brand-900: #0f2570;
+  --color-brand-950: #0a1740;
+
+  /* Ink / neutral scale (near-black, not pure black) */
+  --color-ink-50: #f6f7f9;
+  --color-ink-100: #eceef2;
+  --color-ink-200: #dadee6;
+  --color-ink-300: #b7bfcc;
+  --color-ink-400: #8d97a8;
+  --color-ink-500: #6b7385;
+  --color-ink-600: #4f5567;
+  --color-ink-700: #383c4c;
+  --color-ink-800: #23262f;
+  --color-ink-900: #14161c;
+  --color-ink-950: #0b0c10;
+
+  --font-display: "Plus Jakarta Sans", "Inter", ui-sans-serif, sans-serif;
+  --font-body: "Inter", ui-sans-serif, sans-serif;
+
+  --shadow-soft: 0 1px 2px rgba(11,12,16,0.04), 0 8px 24px -8px rgba(20,32,74,0.12);
+  --shadow-soft-lg: 0 2px 8px rgba(11,12,16,0.05), 0 20px 40px -12px rgba(20,32,74,0.16);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink-900);
+  background-color: #fbfbfd;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background-color: var(--color-brand-200);
+}
+
+/* Custom scrollbar for a slightly more crafted feel */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-ink-200);
+  border-radius: 999px;
+  border: 2px solid #fbfbfd;
+}
+
+.focus-ring {
+  outline: none;
+}
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
