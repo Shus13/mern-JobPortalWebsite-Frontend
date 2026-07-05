@@ -3,8 +3,7 @@ import { extractBlobErrorMessage } from "../utils/errors";
 import { saveBlobAsFile } from "../utils/download";
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api";
-// Strip the trailing /api so we can build a plain file URL like
-// http://localhost:5000/uploads/profile-photos/xyz.png
+
 const SERVER_ORIGIN = BASE_URL.replace(/\/api\/?$/, "");
 
 export const getProfile = async () => {
