@@ -27,7 +27,11 @@ const Login = () => {
       toast.success(`Welcome back, ${data.user?.name?.split(" ")[0] || ""}!`);
       const redirectTo =
         location.state?.from?.pathname ||
-        (data.user?.role === "JobProvider" ? "/dashboard" : "/jobs");
+        (data.user?.role === "JobProvider"
+          ? "/dashboard"
+          : data.user?.role === "Admin"
+            ? "/admin"
+            : "/jobs");
       navigate(redirectTo, { replace: true });
     } catch (err) {
       toast.error(err?.response?.data?.message || "Invalid email or password");
@@ -53,16 +57,23 @@ const Login = () => {
               pattern: { value: /^\S+@\S+\.\S+$/, message: "Enter a valid email" },
             })}
           />
-          <Input
-            label="Password"
-            type="password"
-            placeholder="••••••••"
-            error={errors.password?.message}
-            {...register("password", {
-              required: "Password is required",
-              minLength: { value: 6, message: "Password must be at least 6 characters" },
-            })}
-          />
+          <div>
+            <Input
+              label="Password"
+              type="password"
+              placeholder="••••••••"
+              error={errors.password?.message}
+              {...register("password", {
+                required: "Password is required",
+                minLength: { value: 6, message: "Password must be at least 6 characters" },
+              })}
+            />
+            <div className="mt-1.5 text-right">
+              <Link to="/forgot-password" className="text-xs font-medium text-brand-600 hover:text-brand-700">
+                Forgot password?
+              </Link>
+            </div>
+          </div>
 
           <Button type="submit" className="w-full" size="lg" isLoading={isSubmitting}>
             Log in

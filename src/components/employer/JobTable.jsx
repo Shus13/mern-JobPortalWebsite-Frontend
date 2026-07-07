@@ -36,6 +36,12 @@ const JobTable = ({ jobs, isLoading, onDelete, deletingId }) => {
                     <td className="px-5 py-4">
                       <div className="flex items-center justify-end gap-2">
                         <Link
+                          to={`/jobs/${id}`}
+                          className="focus-ring rounded-lg px-2.5 py-1.5 text-xs font-medium text-ink-600 transition-colors hover:bg-ink-100"
+                        >
+                          View
+                        </Link>
+                        <Link
                           to={`/dashboard/jobs/${id}/applicants`}
                           className="focus-ring rounded-lg px-2.5 py-1.5 text-xs font-medium text-brand-600 transition-colors hover:bg-brand-50"
                         >

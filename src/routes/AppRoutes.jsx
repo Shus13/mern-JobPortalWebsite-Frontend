@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import ProtectedRoute from "./ProtectedRoute";
 import EmployerRoute from "./EmployerRoute";
+import AdminRoute from "./AdminRoute";
 import PublicRoute from "./PublicRoute";
 
 import Home from "../pages/public/Home";
@@ -11,6 +12,8 @@ import Contact from "../pages/public/Contact";
 import Privacy from "../pages/public/Privacy";
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
+import ForgotPassword from "../pages/auth/ForgotPassword";
+import ResetPassword from "../pages/auth/ResetPassword";
 import Jobs from "../pages/jobs/Jobs";
 import JobDetails from "../pages/jobs/JobDetails";
 import MyApplications from "../pages/applications/MyApplications";
@@ -22,6 +25,14 @@ import MyJobs from "../pages/employer/MyJobs";
 import PostJob from "../pages/employer/PostJob";
 import EditJob from "../pages/employer/EditJob";
 import Applicants from "../pages/employer/Applicants";
+
+import AdminLayout from "../pages/admin/AdminLayout";
+import AdminDashboardHome from "../pages/admin/AdminDashboardHome";
+import AdminUsers from "../pages/admin/AdminUsers";
+import AdminUserDetails from "../pages/admin/AdminUserDetails";
+import AdminJobs from "../pages/admin/AdminJobs";
+import AdminJobDetails from "../pages/admin/AdminJobDetails";
+import AdminProfile from "../pages/admin/AdminProfile";
 
 const AppRoutes = () => {
   return (
@@ -39,6 +50,8 @@ const AppRoutes = () => {
         <Route element={<PublicRoute />}>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password/:token" element={<ResetPassword />} />
         </Route>
 
         {/* Authenticated (job seeker) pages */}
@@ -58,6 +71,18 @@ const AppRoutes = () => {
           <Route path="jobs/new" element={<PostJob />} />
           <Route path="jobs/:id/edit" element={<EditJob />} />
           <Route path="jobs/:id/applicants" element={<Applicants />} />
+        </Route>
+      </Route>
+
+      {/* Admin dashboard (own layout, no navbar/footer) */}
+      <Route element={<AdminRoute />}>
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<AdminDashboardHome />} />
+          <Route path="users" element={<AdminUsers />} />
+          <Route path="users/:id" element={<AdminUserDetails />} />
+          <Route path="jobs" element={<AdminJobs />} />
+          <Route path="jobs/:id" element={<AdminJobDetails />} />
+          <Route path="profile" element={<AdminProfile />} />
         </Route>
       </Route>
     </Routes>
