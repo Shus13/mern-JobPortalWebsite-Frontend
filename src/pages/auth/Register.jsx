@@ -92,14 +92,14 @@ const Register = () => {
 
           <Input
             label="Full Name"
-            placeholder="Jordan Lee"
+            placeholder="Balchhi Dhurbe"
             error={errors.name?.message}
             {...register("name", { required: "Full name is required" })}
           />
           <Input
             label="Email"
             type="email"
-            placeholder="you@example.com"
+            placeholder="balchi@example.com"
             error={errors.email?.message}
             {...register("email", {
               required: "Email is required",

@@ -84,7 +84,7 @@ const ResumeUploader = ({ currentResumePath, hasResume, onUpload, onDownload, is
         </label>
         {selectedFile && (
           <>
-            <span className="max-w-[200px] truncate text-sm text-ink-500">{selectedFile.name}</span>
+            <span className="max-w-50 truncate text-sm text-ink-500">{selectedFile.name}</span>
             <Button size="sm" isLoading={isUploading} onClick={handleUploadClick}>
               Save resume
             </Button>

@@ -177,7 +177,7 @@ const JobDetails = () => {
                 <dd className="font-medium text-ink-800">{job.location}</dd>
               </div>
               <div className="flex justify-between">
-                <dt className="text-ink-500">Salary</dt>
+                <dt className="text-ink-500">Salary(in month)</dt>
                 <dd className="font-medium text-ink-800">{formatSalary(job.salary)}</dd>
               </div>
               <div className="flex justify-between">

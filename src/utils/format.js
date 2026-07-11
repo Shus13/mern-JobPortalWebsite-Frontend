@@ -32,5 +32,5 @@ export const formatSalary = (salary) => {
   if (salary === undefined || salary === null || salary === "") return "Not disclosed";
   const num = Number(salary);
   if (Number.isNaN(num)) return salary;
-  return `$${num.toLocaleString()}`;
+  return `Rs. ${num.toLocaleString()}`;
 };

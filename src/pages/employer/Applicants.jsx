@@ -103,7 +103,7 @@ const Applicants = () => {
         <>
           <div className="overflow-hidden rounded-2xl border border-ink-100 bg-white shadow-soft">
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[720px] text-left text-sm">
+              <table className="w-full min-w-180 text-left text-sm">
                 <thead>
                   <tr className="border-b border-ink-100 bg-ink-50/60 text-xs font-semibold uppercase tracking-wide text-ink-500">
                     <th className="px-5 py-3.5">Applicant Name</th>

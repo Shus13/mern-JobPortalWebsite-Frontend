@@ -50,7 +50,7 @@ const Login = () => {
           <Input
             label="Email"
             type="email"
-            placeholder="you@example.com"
+            placeholder="balchi@example.com"
             error={errors.email?.message}
             {...register("email", {
               required: "Email is required",

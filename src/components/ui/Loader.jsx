@@ -44,7 +44,7 @@ export const SkeletonRow = ({ cols = 5 }) => (
   <tr className="animate-pulse">
     {Array.from({ length: cols }).map((_, i) => (
       <td key={i} className="px-4 py-4">
-        <div className="h-3 w-full max-w-[120px] rounded bg-ink-100" />
+        <div className="h-3 w-full max-w-30 rounded bg-ink-100" />
       </td>
     ))}
   </tr>

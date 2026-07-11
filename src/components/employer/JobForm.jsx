@@ -30,7 +30,7 @@ const JobForm = ({ defaultValues, onSubmit, isSubmitting, submitLabel = "Post Jo
         />
         <Input
           label="Company"
-          placeholder="e.g. Northwind Labs"
+          placeholder="e.g. HireNest"
           error={errors.company?.message}
           {...register("company", { required: "Company is required" })}
         />
@@ -44,7 +44,7 @@ const JobForm = ({ defaultValues, onSubmit, isSubmitting, submitLabel = "Post Jo
           {...register("location", { required: "Location is required" })}
         />
         <Input
-          label="Salary"
+          label="Salary (in month)"
           type="number"
           placeholder="e.g. 85000"
           error={errors.salary?.message}

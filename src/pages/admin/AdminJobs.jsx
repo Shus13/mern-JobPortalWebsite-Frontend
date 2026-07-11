@@ -86,7 +86,7 @@ const AdminJobs = () => {
         <>
           <div className="overflow-hidden rounded-2xl border border-ink-100 bg-white shadow-soft">
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[760px] text-left text-sm">
+              <table className="w-full min-w-190 text-left text-sm">
                 <thead>
                   <tr className="border-b border-ink-100 bg-ink-50/60 text-xs font-semibold uppercase tracking-wide text-ink-500">
                     <th className="px-5 py-3.5">Job Title</th>
@@ -106,7 +106,7 @@ const AdminJobs = () => {
                       const id = job._id || job.id;
                       return (
                         <tr key={id} className="transition-colors hover:bg-ink-50/50">
-                          <td className="max-w-[200px] px-5 py-4 font-medium text-ink-900">
+                          <td className="max-w-50 px-5 py-4 font-medium text-ink-900">
                             <span className="line-clamp-1">{job.title}</span>
                           </td>
                           <td className="px-5 py-4 text-ink-600">{job.company}</td>

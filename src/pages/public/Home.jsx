@@ -40,7 +40,7 @@ const Home = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-ink-100 bg-gradient-to-b from-brand-50/60 via-white to-white">
+      <section className="relative overflow-hidden border-b border-ink-100 bg-linear-to-b from-brand-50/60 via-white to-white">
         <div
           className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-brand-200/40 blur-3xl"
           aria-hidden="true"
